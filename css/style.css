@@ -1,0 +1,502 @@
+/* ----------------------------- */
+/* Basic Setup */
+/* ----------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font: inherit;
+}
+
+html, 
+body {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    color: #3a4246;
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
+    line-height: 1.5rem;
+  
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+/* ----------------------------- */
+/* Common Elements */
+/* ----------------------------- */
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 7rem;
+    line-height: 6rem;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    color: #00364b;
+    line-height: 1;
+}
+
+h3 {
+    font-size: 1.8rem;
+    color: #849198;
+}
+
+h4 {
+    font-size: 1.4rem;
+    margin-bottom: .75rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.wrapper {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr {
+    width: 80px;
+    height: 5px;
+    background: #00364b;
+    margin: .5rem 0 1rem;
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* ----------------------------- */
+/* Header */
+/* ----------------------------- */
+
+.bg-img {
+    background-image: linear-gradient(#ffffff, rgba(255, 255, 255, 0), transparent), url(images/big_sur_hero_alt.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.logo {
+    text-decoration: none;
+    color: #00364b;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    border: 2px solid #00364b;
+    padding: .25rem .5rem .5rem;
+    float: left;
+    margin-left: 5%;
+}
+
+.navbar {
+    padding-top: 2rem;
+}
+
+.nav {
+    float: right;
+    margin-right: 5%;
+}
+
+.nav li {
+    display: inline-block;
+}
+
+.nav a {
+    color: #3a4246;
+    text-decoration: none;
+    margin-left: 2rem;
+}
+
+.nav a:hover {
+    color: #849198;
+    transition: color .2s;
+}
+
+.navbar_toggle {
+    display: none;
+}
+
+.hero-txt {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    color: #00364b;
+    line-height: 3rem;   
+}
+
+/* ----------------------------- */
+/* Discover */
+/* ----------------------------- */
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.txt-block {
+    grid-column: 1/5;
+    grid-row: 1;
+}
+
+.txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    background: #00364b;
+    padding:  0 40% 0 10%;
+}
+
+.white-txt {
+    color: #ffffff;
+}
+
+
+.img-lrg {
+    grid-column: 4/8;
+    grid-row: 1;
+    align-self: center;
+}
+
+.img-lrg img {
+    box-shadow: 5px 5px 10px #333333;
+}
+
+.title-a {
+    grid-column: 7/9;
+    grid-row: 1;
+    margin-top: 7rem;
+    z-index: 1;
+}
+
+.h3 {
+    margin-bottom: 2rem;
+}
+
+.white-txt.h3 {
+    line-height: 2.5rem;
+}
+
+/* ----------------------------- */
+/* Explore */
+/* ----------------------------- */
+
+.slider {
+    width: 90%;
+    margin: 100px auto;
+}
+
+.slick-slide {
+    margin: 0 20px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: #00364b;
+}
+
+
+.slick-slide {
+    transition: all ease-in-out .3s;
+    opacity: .2;
+}
+
+.slick-active {
+    opacity: .5;
+}
+
+.slick-current {
+    opacity: 1;
+}
+
+.card {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+    margin: 10px;
+}
+
+.box {
+    padding: 1.5rem;
+    background: #ffffff;
+}
+
+.explore {
+    background: linear-gradient(rgba(255, 255, 255, 0), #ffffff), url(images/bs_typography.png) no-repeat center;
+    background-size: cover;
+    padding-top: 100px;
+}
+
+.txt-box {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* ----------------------------- */
+/* Camp */
+/* ----------------------------- */
+
+.flex {
+    display: flex;
+}
+
+.card-left,
+.card-right {
+    width: 50%;
+    margin-bottom: 6rem;
+}
+
+.card-txt {
+    margin: 2rem 0 2rem;
+    padding: 0 5%;
+}
+
+.title-c {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4rem 0;
+}
+
+.btn {
+    background: #3d8fa0;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    font-style: italic;
+    color: #ffffff;
+    margin: 0 5%;
+}
+
+.btn:hover,
+.btn:active {
+    background: #00364b;
+    color: #ffffff;
+    transition: background .3s;
+}
+
+/* ----------------------------- */
+/* Footer */
+/* ----------------------------- */
+
+footer {
+    height: 30vh;
+    background: #00364b;
+    color: #ffffff;
+    padding-top: 2rem;
+}
+
+.footer-txt {
+    margin: 2rem 5%;
+
+}
+
+footer .logo {
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+/* ----------------------------- */
+/* Screen Width up to 768 */
+/* ----------------------------- */
+
+@media only screen and (max-width: 768px) {
+    
+    /* ----------------------------- */
+    /* Header */
+    /* ----------------------------- */
+    
+    .navbar_toggle {
+        display: block;
+        color: #ffffff;
+        font-size: 1.5rem;
+        float: right;
+        cursor: pointer;
+        margin-right: 5%;
+    }
+    
+    .nav {
+        display: none;
+        float: none;
+    }
+    
+    .nav li {
+        display: block;
+        margin: 1rem;
+        padding-bottom: 1rem;
+        text-align: center;
+        border-bottom: 1px solid #ffffff;
+    }
+    
+    .nav li:last-child {
+        border-bottom: none;
+    }
+    
+    .nav li:first-child {
+        margin-top: 3rem;
+    }
+    
+    .nav a {
+        margin-left: 0;
+        color: #ffffff;
+    }
+    
+    .nav a:hover {
+        border-bottom: none;
+    }
+    
+    .navbar {
+        background: #00364b;
+        height: 5rem;
+    }
+    
+    .navbar ul {
+        background: #00364b;
+        width: 100%;
+    }
+    
+    .logo {
+        color: #ffffff;
+        border: 2px solid #ffffff;
+    }
+    
+    .hero-txt {
+        left: 5%;
+        right: 5%;
+        text-align: center;
+    }
+    
+    /* ----------------------------- */
+    /* Discover */
+    /* ----------------------------- */
+    
+    .white-txt {
+        color: #849198;
+    }
+    
+    .white-txt:last-child {
+        color: #3a4246;
+    }
+    
+    
+     /* ----------------------------- */
+    /* Carousel */
+    /* ----------------------------- */
+    
+    .slider {
+        width: 90%;
+        margin-top: 50px;
+    }
+    
+    /* ----------------------------- */
+    /* Camp */
+    /* ----------------------------- */
+    
+    .flex {
+        display: block;
+    }
+    
+    .card-left,
+    .card-right {
+        width: 100%;
+    }
+    
+}
+
+/* ----------------------------- */
+/* Screen Width up to 1024 */
+/* ----------------------------- */
+
+@media only screen and (max-width: 1024px) {
+    
+    /* ----------------------------- */
+    /* About */
+    /* ----------------------------- */
+    
+     .about {
+        display: block;
+    }
+    
+    .txt-block {
+        display: block;
+    }
+
+    .txt {
+        display: block;
+        height: auto;
+        background: none;
+        color: #3a4246;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+    
+    .title-a {
+        padding-left: 5%;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .img-lrg {
+        grid-column: 4/8;
+        grid-row: 1;
+        align-self: center;
+    }
+
+    .img-lrg img {
+            box-shadow: none;
+    }
+
+    .title {
+        margin-top: 4rem;
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    
+    /* ----------------------------- */
+    /* Discover */
+    /* ----------------------------- */
+    
+    .white-txt {
+        color: #849198;
+    }
+    
+    .white-txt:last-child {
+        color: #3a4246;
+    }
+    
+    /* ----------------------------- */
+    /* Carousel */
+    /* ----------------------------- */
+    
+    .slider {
+        width: 90%;
+        margin-top: 50px;
+    }
+    
+    .explore {
+        margin-bottom: 100px
+    }
+}
