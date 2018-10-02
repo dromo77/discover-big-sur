@@ -351,10 +351,6 @@ footer .logo {
         border-bottom: none;
     }
     
-    .nav li:first-child {
-        margin-top: 3rem;
-    }
-    
     .nav a {
         margin-left: 0;
         color: #ffffff;
@@ -366,12 +362,15 @@ footer .logo {
     
     .navbar {
         background: #00364b;
-        height: 5rem;
+        height: 6rem;
     }
     
     .navbar ul {
         background: #00364b;
         width: 100%;
+        margin-top: 4rem;
+        position: relative;
+        z-index: 1;
     }
     
     .logo {
