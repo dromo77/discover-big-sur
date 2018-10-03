@@ -147,19 +147,31 @@ hr {
 /* ----------------------------- */
 
 .about {
-    display: grid;
+    display: -ms-grid;
+    display: grid; 
+    -ms-grid-columns: (1fr)[8];
     grid-template-columns: repeat(8, 1fr);
 }
 
 .txt-block {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
     grid-column: 1/5;
+    -ms-grid-row: 1;
     grid-row: 1;
 }
 
 .txt {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 100vh;
     background: #00364b;
     padding:  0 40% 0 10%;
@@ -171,17 +183,26 @@ hr {
 
 
 .img-lrg {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 4;
     grid-column: 4/8;
+    -ms-grid-row: 1;
     grid-row: 1;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
     align-self: center;
 }
 
 .img-lrg img {
+    -webkit-box-shadow: 5px 5px 10px #333333;
     box-shadow: 5px 5px 10px #333333;
 }
 
 .title-a {
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 2;
     grid-column: 7/9;
+    -ms-grid-row: 1;
     grid-row: 1;
     margin-top: 7rem;
     z-index: 1;
@@ -191,7 +212,7 @@ hr {
     margin-bottom: 2rem;
 }
 
-.white-txt.h3 {
+.txt-height {
     line-height: 2.5rem;
 }
 
@@ -219,6 +240,8 @@ hr {
 
 
 .slick-slide {
+    -webkit-transition: all ease-in-out .3s;
+    -o-transition: all ease-in-out .3s;
     transition: all ease-in-out .3s;
     opacity: .2;
 }
@@ -232,6 +255,7 @@ hr {
 }
 
 .card {
+    -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
     margin: 10px;
 }
@@ -242,6 +266,9 @@ hr {
 }
 
 .explore {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#ffffff)), url(images/bs_typography.png) no-repeat center;
+    background: -webkit-linear-gradient(rgba(255, 255, 255, 0), #ffffff), url(images/bs_typography.png) no-repeat center;
+    background: -o-linear-gradient(rgba(255, 255, 255, 0), #ffffff), url(images/bs_typography.png) no-repeat center;
     background: linear-gradient(rgba(255, 255, 255, 0), #ffffff), url(images/bs_typography.png) no-repeat center;
     background-size: cover;
     padding-top: 100px;
@@ -257,6 +284,8 @@ hr {
 /* ----------------------------- */
 
 .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -272,8 +301,15 @@ hr {
 }
 
 .title-c {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin: 4rem 0;
 }
@@ -291,6 +327,8 @@ hr {
 .btn:active {
     background: #00364b;
     color: #ffffff;
+    -webkit-transition: background .3s;
+    -o-transition: background .3s;
     transition: background .3s;
 }
 
@@ -457,13 +495,19 @@ footer .logo {
     }
 
     .img-lrg {
+        -ms-grid-column: 4;
+        -ms-grid-column-span: 4;
         grid-column: 4/8;
+        -ms-grid-row: 1;
         grid-row: 1;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
         align-self: center;
     }
 
     .img-lrg img {
-            box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
     }
 
     .title {
